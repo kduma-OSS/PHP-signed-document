@@ -13,6 +13,7 @@ class DocumentTest extends TestCase
 
     const INVALID_XML                 = <<<'XML'
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://github.com/kduma-OSS/PHP-signed-document/raw/master/schema/signed-document.xsl"?>
 <document xmlns="https://opensource.duma.sh/xml/signed-document" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://opensource.duma.sh/xml/signed-document https://github.com/kduma-OSS/PHP-signed-document/raw/master/schema/signed-document.xsd">
   <body>qwerty</body>
 </document>
@@ -21,6 +22,7 @@ XML;
 
     const UNSIGNED_XML                 = <<<'XML'
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://github.com/kduma-OSS/PHP-signed-document/raw/master/schema/signed-document.xsl"?>
 <document xmlns="https://opensource.duma.sh/xml/signed-document" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://opensource.duma.sh/xml/signed-document https://github.com/kduma-OSS/PHP-signed-document/raw/master/schema/signed-document.xsd">
   <content encoding="raw" sha256="5bd6045a7697c48316411ff00be02595cf3d8596d99ba12482d18c90d61633cb"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit...]]></content>
 </document>
@@ -28,6 +30,7 @@ XML;
 XML;
     const UNSIGNED_BIN_XML             = <<<'XML'
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://github.com/kduma-OSS/PHP-signed-document/raw/master/schema/signed-document.xsl"?>
 <document xmlns="https://opensource.duma.sh/xml/signed-document" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://opensource.duma.sh/xml/signed-document https://github.com/kduma-OSS/PHP-signed-document/raw/master/schema/signed-document.xsd">
   <content encoding="base64" sha256="5bd6045a7697c48316411ff00be02595cf3d8596d99ba12482d18c90d61633cb"><![CDATA[
 TG9yZW0gaXBzdW0gZG9sb3Igc2l0IGFtZXQsIGNvbnNlY3RldHVyIGFkaXBpc2Np
@@ -38,6 +41,7 @@ bmcgZWxpdC4uLg==
 XML;
     const SIGNED_XML                    = <<<'XML'
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://github.com/kduma-OSS/PHP-signed-document/raw/master/schema/signed-document.xsl"?>
 <document xmlns="https://opensource.duma.sh/xml/signed-document" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="lipsum.txt" xsi:schemaLocation="https://opensource.duma.sh/xml/signed-document https://github.com/kduma-OSS/PHP-signed-document/raw/master/schema/signed-document.xsd">
   <content encoding="raw" sha256="5bd6045a7697c48316411ff00be02595cf3d8596d99ba12482d18c90d61633cb"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit...]]></content>
   <signature id="signature-id" public-key="public-key">signature</signature>
@@ -47,6 +51,7 @@ XML;
 XML;
     const UNSIGNED_NONFORMATTED_BIN_XML = <<<'XML'
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://github.com/kduma-OSS/PHP-signed-document/raw/master/schema/signed-document.xsl"?>
 <document xmlns="https://opensource.duma.sh/xml/signed-document" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://opensource.duma.sh/xml/signed-document https://github.com/kduma-OSS/PHP-signed-document/raw/master/schema/signed-document.xsd"><content encoding="base64" sha256="5bd6045a7697c48316411ff00be02595cf3d8596d99ba12482d18c90d61633cb">TG9yZW0gaXBzdW0gZG9sb3Igc2l0IGFtZXQsIGNvbnNlY3RldHVyIGFkaXBpc2NpbmcgZWxpdC4uLg==</content></document>
 
 XML;

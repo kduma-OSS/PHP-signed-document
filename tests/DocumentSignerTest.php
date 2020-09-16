@@ -15,6 +15,7 @@ class DocumentSignerTest extends TestCase
 
     const UNSIGNED_XML = <<<'XML'
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://github.com/kduma-OSS/PHP-signed-document/raw/master/schema/signed-document.xsl"?>
 <document xmlns="https://opensource.duma.sh/xml/signed-document" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="lipsum.txt" xsi:schemaLocation="https://opensource.duma.sh/xml/signed-document https://github.com/kduma-OSS/PHP-signed-document/raw/master/schema/signed-document.xsd">
   <content encoding="raw" sha256="5bd6045a7697c48316411ff00be02595cf3d8596d99ba12482d18c90d61633cb"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit...]]></content>
 </document>
@@ -22,6 +23,7 @@ class DocumentSignerTest extends TestCase
 XML;
     const SIGNED_XML   = <<<'XML'
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://github.com/kduma-OSS/PHP-signed-document/raw/master/schema/signed-document.xsl"?>
 <document xmlns="https://opensource.duma.sh/xml/signed-document" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="lipsum.txt" xsi:schemaLocation="https://opensource.duma.sh/xml/signed-document https://github.com/kduma-OSS/PHP-signed-document/raw/master/schema/signed-document.xsd">
   <content encoding="raw" sha256="5bd6045a7697c48316411ff00be02595cf3d8596d99ba12482d18c90d61633cb"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit...]]></content>
   <signature id="signature-id" public-key="31400400e81832336bfad7c6495e7e1698a9e844746dc0278ed55af3e9a9574214a78fdf6953374f0524099019df1e69ca22c0a74ef7b83ba3ccd5bd5f922ff8fc4d6539b559b1a13a2ad6a3e27ff70689640b29b13f351391b15ea8c453d48ad999ff71">e7dca247652cae046d0f765f1d1a0cb3aff15b987f4de5103e4d61ca67d03b1aca55b616ed58ca6fc7902c76d8b6ce082d75838aea60c82540744fae1bf31c02</signature>

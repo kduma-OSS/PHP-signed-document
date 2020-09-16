@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62efb2c2-fd03-40b9-a497-9f649de8dc01" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/schema/signed-document.xsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/schema/signed-document.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/schema/signed-document.xsd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Document.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Document.php" afterDir="false" />

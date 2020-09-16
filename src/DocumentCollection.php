@@ -95,6 +95,9 @@ class DocumentCollection
         $dom = new DOMDocument('1.0', 'UTF-8');
         $dom->formatOutput = $formatOutput;
 
+        $xslt = $dom->createProcessingInstruction('xml-stylesheet', 'type="text/xsl" href="https://github.com/kduma-OSS/PHP-signed-document/raw/master/schema/signed-document.xsl"');
+        $dom->appendChild($xslt);
+
         $documents = $dom->createElementNS(Document::NAMESPACE_URI, "documents");
         $dom->appendChild($documents);
 
