@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62efb2c2-fd03-40b9-a497-9f649de8dc01" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/schema/signed-document.xsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schema/signed-document.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/schema/signed-document.xsd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Document.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Document.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DocumentCollection.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DocumentCollection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/DocumentCollectionTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/DocumentCollectionTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/DocumentSignerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/DocumentSignerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/DocumentTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/DocumentTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/DocumentValidatorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/DocumentValidatorTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +101,8 @@
       <option name="presentableId" value="Default" />
       <updated>1600213505968</updated>
       <workItem from="1600213507175" duration="9307000" />
-      <workItem from="1600275808905" duration="5562000" />
+      <workItem from="1600275808905" duration="5839000" />
+      <workItem from="1600296290477" duration="275000" />
     </task>
     <servers />
   </component>
@@ -155,22 +150,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="731" y="459" key="ComposerInitDialogKey/0.0.1920.1080@0.0.1920.1080" timestamp="1600213604394" />
-    <state width="1878" height="305" key="GridCell.Tab.0.bottom" timestamp="1600289294655">
+    <state width="1878" height="305" key="GridCell.Tab.0.bottom" timestamp="1600296565661">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="305" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600289294655" />
-    <state width="1878" height="305" key="GridCell.Tab.0.center" timestamp="1600289294652">
+    <state width="1878" height="305" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600296565661" />
+    <state width="1878" height="305" key="GridCell.Tab.0.center" timestamp="1600296565658">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="305" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600289294652" />
-    <state width="1878" height="305" key="GridCell.Tab.0.left" timestamp="1600289294649">
+    <state width="1878" height="305" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600296565658" />
+    <state width="1878" height="305" key="GridCell.Tab.0.left" timestamp="1600296565657">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="305" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600289294649" />
-    <state width="1878" height="305" key="GridCell.Tab.0.right" timestamp="1600289294653">
+    <state width="1878" height="305" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600296565657" />
+    <state width="1878" height="305" key="GridCell.Tab.0.right" timestamp="1600296565659">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="305" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600289294653" />
+    <state width="1878" height="305" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600296565659" />
     <state x="707" y="273" key="NewPhpClassDialog" timestamp="1600219143226">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -189,7 +184,7 @@
     <state x="625" y="241" width="670" height="676" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1600216539240" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/signed_document@phpunit_xml_dist.xml" NAME="phpunit.xml.dist Coverage Results" MODIFIED="1600289294636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/signed_document@phpunit_xml_dist.xml" NAME="phpunit.xml.dist Coverage Results" MODIFIED="1600296535942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/signed_document@DocumentTest.xml" NAME="DocumentTest Coverage Results" MODIFIED="1600215241447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

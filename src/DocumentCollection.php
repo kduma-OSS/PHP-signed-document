@@ -85,18 +85,22 @@ class DocumentCollection
     }
 
     /**
-     * @param bool $formatOutput
+     * @param bool        $formatOutput
+     *
+     * @param string|null $xslUrl
      *
      * @return false|string
      * @throws \Exception
      */
-    public function getXml(bool $formatOutput = true)
+    public function getXml(bool $formatOutput = true, ?string $xslUrl = Document::XSL_URL)
     {
         $dom = new DOMDocument('1.0', 'UTF-8');
         $dom->formatOutput = $formatOutput;
 
-        $xslt = $dom->createProcessingInstruction('xml-stylesheet', 'type="text/xsl" href="https://github.com/kduma-OSS/PHP-signed-document/raw/master/schema/signed-document.xsl"');
-        $dom->appendChild($xslt);
+        if($xslUrl) {
+            $xslt = $dom->createProcessingInstruction('xml-stylesheet', sprintf('type="text/xsl" href="%s"', $xslUrl));
+            $dom->appendChild($xslt);
+        }
 
         $documents = $dom->createElementNS(Document::NAMESPACE_URI, "documents");
         $dom->appendChild($documents);
@@ -109,7 +113,7 @@ class DocumentCollection
         }
 
         $schemaLocationAttribute = $dom->createAttributeNS("http://www.w3.org/2001/XMLSchema-instance", "xsi:schemaLocation");
-        $schemaLocationAttribute->value = Document::NAMESPACE_URI.' https://github.com/kduma-OSS/PHP-signed-document/raw/master/schema/signed-document.xsd';
+        $schemaLocationAttribute->value = sprintf("%s %s", Document::NAMESPACE_URI, Document::XSD_URL);
         $documents->appendChild($schemaLocationAttribute);
 
         foreach ($this->documents as $document) {

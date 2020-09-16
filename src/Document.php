@@ -13,6 +13,8 @@ use ParagonIE\Halite\KeyFactory;
 class Document
 {
     const NAMESPACE_URI = "https://opensource.duma.sh/xml/signed-document";
+    const XSL_URL = 'https://github.com/kduma-OSS/PHP-signed-document/raw/master/schema/signed-document.xsl';
+    const XSD_URL = 'https://github.com/kduma-OSS/PHP-signed-document/raw/master/schema/signed-document.xsd';
 
     protected ?string $id = null;
     protected string $sha256;
@@ -221,18 +223,22 @@ class Document
     }
 
     /**
-     * @param bool $formatOutput
+     * @param bool        $formatOutput
+     *
+     * @param string|null $xslUrl
      *
      * @return false|string
      * @throws \Exception
      */
-    public function getXml(bool $formatOutput = true)
+    public function getXml(bool $formatOutput = true, ?string $xslUrl = self::XSL_URL)
     {
         $dom = new DOMDocument('1.0', 'UTF-8');
         $dom->formatOutput = $formatOutput;
 
-        $xslt = $dom->createProcessingInstruction('xml-stylesheet', 'type="text/xsl" href="https://github.com/kduma-OSS/PHP-signed-document/raw/master/schema/signed-document.xsl"');
-        $dom->appendChild($xslt);
+        if($xslUrl) {
+            $xslt = $dom->createProcessingInstruction('xml-stylesheet', sprintf('type="text/xsl" href="%s"', $xslUrl));
+            $dom->appendChild($xslt);
+        }
 
         $document = $dom->createElementNS(self::NAMESPACE_URI, "document");
         $dom->appendChild($document);
@@ -245,7 +251,7 @@ class Document
         }
 
         $schemaLocationAttribute = $dom->createAttributeNS("http://www.w3.org/2001/XMLSchema-instance", "xsi:schemaLocation");
-        $schemaLocationAttribute->value = self::NAMESPACE_URI.' https://github.com/kduma-OSS/PHP-signed-document/raw/master/schema/signed-document.xsd';
+        $schemaLocationAttribute->value = sprintf("%s %s", self::NAMESPACE_URI, self::XSD_URL);
         $document->appendChild($schemaLocationAttribute);
 
         $this->getDom($dom, $document, $formatOutput);
