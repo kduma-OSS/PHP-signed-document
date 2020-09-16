@@ -13,6 +13,12 @@ class DocumentCollection
      * @var array|Document[]
      */
     protected array $documents = [];
+    protected ?string $id = null;
+
+    public function __construct(?string $id = null)
+    {
+        $this->id = $id;
+    }
 
     public static function fromXml(string $xml): DocumentCollection
     {
@@ -24,7 +30,13 @@ class DocumentCollection
         }
 
         $collection = new DocumentCollection();
-        foreach ($dom->getElementsByTagNameNS(Document::NAMESPACE_URI, "document") as $document) {
+
+        $documents = $dom->getElementsByTagNameNS(Document::NAMESPACE_URI, "documents")->item(0);
+
+        $collectionId = $documents->attributes->getNamedItem("id");
+        $collection->id = $collectionId ? $collectionId->nodeValue : null;
+
+        foreach ($documents->getElementsByTagNameNS(Document::NAMESPACE_URI, "document") as $document) {
             $collection->addDocument(
                 Document::fromDom($document)
             );
@@ -54,6 +66,25 @@ class DocumentCollection
     }
 
     /**
+     * @return string|null
+     */
+    public function getId(): ?string
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param string|null $id
+     *
+     * @return DocumentCollection
+     */
+    public function setId(?string $id): DocumentCollection
+    {
+        $this->id = $id;
+        return $this;
+    }
+
+    /**
      * @param bool $formatOutput
      *
      * @return false|string
@@ -66,6 +97,13 @@ class DocumentCollection
 
         $documents = $dom->createElementNS(Document::NAMESPACE_URI, "documents");
         $dom->appendChild($documents);
+
+        if($this->getId() !== null)
+        {
+            $idAttribute = $dom->createAttributeNS(Document::NAMESPACE_URI, "id");
+            $idAttribute->value = $this->getId();
+            $documents->appendChild($idAttribute);
+        }
 
         $schemaLocationAttribute = $dom->createAttributeNS("http://www.w3.org/2001/XMLSchema-instance", "xsi:schemaLocation");
         $schemaLocationAttribute->value = Document::NAMESPACE_URI.' https://github.com/kduma-OSS/PHP-signed-document/raw/master/schema/signed-document.xsd';

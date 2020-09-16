@@ -3,14 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="62efb2c2-fd03-40b9-a497-9f649de8dc01" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schema/signed-document.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/schema/signed-document.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Document.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Document.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DocumentCollection.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DocumentCollection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/DocumentCollectionTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/DocumentCollectionTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/DocumentSignerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/DocumentSignerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/DocumentTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/DocumentTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/DocumentValidatorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/DocumentValidatorTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable path="composer" />
@@ -72,11 +78,11 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/schema" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
@@ -100,6 +106,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600213505968</updated>
       <workItem from="1600213507175" duration="9307000" />
+      <workItem from="1600275808905" duration="5562000" />
     </task>
     <servers />
   </component>
@@ -119,14 +126,18 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="424" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1600215433832" />
-    <state x="100" y="100" width="1720" height="880" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1600272452678">
+    <state x="100" y="100" width="1720" height="880" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1600289498266">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="100" y="100" width="1720" height="880" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1600272452678" />
-    <state x="773" y="263" key="#com.intellij.ide.util.MemberChooser" timestamp="1600219188674">
+    <state x="100" y="100" width="1720" height="880" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1600289498266" />
+    <state x="667" y="349" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600275838695">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="773" y="263" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1600219188674" />
+    <state x="667" y="349" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1600275838695" />
+    <state x="773" y="263" key="#com.intellij.ide.util.MemberChooser" timestamp="1600288822257">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="773" y="263" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1600288822257" />
     <state x="698" y="302" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600220256646">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -143,22 +154,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="731" y="459" key="ComposerInitDialogKey/0.0.1920.1080@0.0.1920.1080" timestamp="1600213604394" />
-    <state width="1878" height="305" key="GridCell.Tab.0.bottom" timestamp="1600273268537">
+    <state width="1878" height="305" key="GridCell.Tab.0.bottom" timestamp="1600289294655">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="305" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600273268537" />
-    <state width="1878" height="305" key="GridCell.Tab.0.center" timestamp="1600273268534">
+    <state width="1878" height="305" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600289294655" />
+    <state width="1878" height="305" key="GridCell.Tab.0.center" timestamp="1600289294652">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="305" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600273268534" />
-    <state width="1878" height="305" key="GridCell.Tab.0.left" timestamp="1600273268532">
+    <state width="1878" height="305" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600289294652" />
+    <state width="1878" height="305" key="GridCell.Tab.0.left" timestamp="1600289294649">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="305" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600273268532" />
-    <state width="1878" height="305" key="GridCell.Tab.0.right" timestamp="1600273268535">
+    <state width="1878" height="305" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600289294649" />
+    <state width="1878" height="305" key="GridCell.Tab.0.right" timestamp="1600289294653">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="305" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600273268535" />
+    <state width="1878" height="305" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600289294653" />
     <state x="707" y="273" key="NewPhpClassDialog" timestamp="1600219143226">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -177,7 +188,7 @@
     <state x="625" y="241" width="670" height="676" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1600216539240" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/signed_document@phpunit_xml_dist.xml" NAME="phpunit.xml.dist Coverage Results" MODIFIED="1600272517461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/signed_document@phpunit_xml_dist.xml" NAME="phpunit.xml.dist Coverage Results" MODIFIED="1600289294636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/signed_document@DocumentTest.xml" NAME="DocumentTest Coverage Results" MODIFIED="1600215241447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
