@@ -1,0 +1,44 @@
+{
+    "name": "kduma/signed-document",
+    "description": "XML Document Signer",
+    "keywords": [
+        "kduma",
+        "signed-document"
+    ],
+    "homepage": "https://github.com/kduma-oss/signed-document",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Krystian Duma",
+            "email": "oss@krystian.duma.sh",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "ext-dom": "*",
+        "paragonie/halite": "^4.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kduma\\SignedDocument\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kduma\\SignedDocument\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
