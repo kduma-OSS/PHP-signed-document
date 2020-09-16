@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/kduma/signed-document.svg?style=flat-square)](https://packagist.org/packages/kduma/signed-document)
 [![Build Status](https://img.shields.io/travis/kduma/signed-document/master.svg?style=flat-square)](https://travis-ci.org/kduma/signed-document)
-[![Quality Score](https://img.shields.io/scrutinizer/g/kduma/signed-document.svg?style=flat-square)](https://scrutinizer-ci.com/g/kduma/signed-document)
+[![Quality Score](https://img.shields.io/scrutinizer/g/kduma-OSS/PHP-signed-document/.svg?style=flat-square)](https://scrutinizer-ci.com/g/kduma/signed-document)
 [![Total Downloads](https://img.shields.io/packagist/dt/kduma/signed-document.svg?style=flat-square)](https://packagist.org/packages/kduma/signed-document)
 
 PHP implementation of digital document signing. 
