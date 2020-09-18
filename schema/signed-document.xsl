@@ -128,7 +128,7 @@
                     <br/>
                     <strong style="font-family: 'Courier New'">
                         <xsl:call-template name="default">
-                            <xsl:with-param name="node" select="$node/@id"/>
+                            <xsl:with-param name="node" select="./@id"/>
                             <xsl:with-param name="value" select="'no id'"/>
                         </xsl:call-template>
                     </strong>
@@ -136,12 +136,12 @@
                 <p>
                     Public Key:
                     <br/>
-                    <strong style="font-family: 'Courier New'"><xsl:value-of select="$node/@public-key"/></strong>
+                    <strong style="font-family: 'Courier New'"><xsl:value-of select="./@public-key"/></strong>
                 </p>
                 <p>
                     Signature:
                     <br/>
-                    <strong style="font-family: 'Courier New'"><xsl:value-of select="$node"/></strong>
+                    <strong style="font-family: 'Courier New'"><xsl:value-of select="."/></strong>
                 </p>
             </xsl:for-each>
         </xsl:if>
