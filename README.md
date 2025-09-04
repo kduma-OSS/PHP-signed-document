@@ -7,6 +7,8 @@
 
 PHP implementation of digital document signing. 
 
+Check full documentation here: [opensource.duma.sh/libraries/deprecated/signed-document](https://opensource.duma.sh/libraries/deprecated/signed-document)
+
 ## Installation
 
 You can install the package via composer:
